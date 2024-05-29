@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Only</title>
+    <style>
+        .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            background: black;
+            opacity: 1;
+        }
+
+        .swiper-pagination-bullet-active {
+            color: black;
+            background: black;
+            width: 54px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="bg-black py-header w-full flex justify-center">
+            <p class="text-white font-openSans text-xs font-semibold">
+                ENVIO GRATIS EN COMPRAS MAYORES A $2.500
+            </p>
+        </div>
+
+        <div class="relative w-full">
+            <div
+                class="absolute top-0 left-0 z-10 bg-custom-gradient w-full flex justify-between p-3 md:p-5 items-center">
+                <svg class="hidden md:flex" width="157" height="42" viewBox="0 0 157 42" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M147.494 0.636791L136.354 17.9051L124.913 0.636791H115.34L132.151 27.0449V40.3051H140.523V27.0449L157 0.636791H147.494ZM123.245 31.2777H102.365V0.599332H93.9265V40.3426H123.245V31.2777ZM86.0548 0.561874H77.7495V25.9211L57.1698 0.561874H48.4976V40.3051H56.9696V14.4214L77.7162 40.3051H86.0215V0.561874H86.0548ZM32.9877 27.1572C32.5874 28.4308 32.0871 29.4797 31.42 30.3037C30.9864 30.8282 30.8863 30.9031 30.6195 31.1278C30.4527 31.2402 30.2193 31.4275 29.9191 31.5773C29.2186 31.9894 28.318 32.289 27.184 32.5138C25.6163 32.8509 23.6484 33.0007 21.3136 33.0007C18.9454 33.0007 16.9775 32.8134 15.3765 32.5138C14.2758 32.289 13.3418 31.9894 12.6414 31.5773C12.4079 31.4275 12.2078 31.2402 11.9743 31.0904C11.7742 30.9405 11.574 30.8282 11.1404 30.2663C10.5067 29.4797 10.0064 28.4308 9.60612 27.1198C9.07245 25.3218 8.77225 23.1492 8.77225 20.5646C8.77225 18.0174 9.03909 15.8448 9.60612 14.0094C10.0064 12.6984 10.5067 11.687 11.1404 10.8629C11.5407 10.3385 11.7742 10.1512 11.9743 9.9639C12.2078 9.77661 12.3078 9.70169 12.6414 9.55186C13.3418 9.17728 14.2424 8.84015 15.3765 8.6154C16.9441 8.27828 18.912 8.12844 21.2802 8.12844C23.5817 8.12844 25.5496 8.31574 27.184 8.65286C28.3514 8.87761 29.252 9.21474 29.9191 9.58932C30.6195 10.0014 30.9864 10.3385 31.42 10.9004C32.0871 11.7244 32.5874 12.7733 32.9877 14.0469C33.5214 15.8448 33.8215 18.0174 33.8215 20.602C33.8215 23.1118 33.5547 25.3218 32.9877 27.1572ZM41.1929 9.58932C40.5258 7.41674 39.6586 5.6562 38.5913 4.3077C37.8908 3.4087 37.4906 3.10904 37.2571 2.9592C36.8902 2.697 36.4899 2.43479 35.9896 2.17258C34.8555 1.61071 33.2545 1.12375 31.2532 0.749165C28.5182 0.22475 25.2161 0 21.3136 0C17.4778 0 14.1423 0.262208 11.3406 0.786624C9.33928 1.16121 7.77162 1.61071 6.60421 2.21004C6.13724 2.43479 5.93712 2.58462 5.53686 2.88429C5.30338 3.03412 4.73635 3.44616 4.0359 4.34516C2.9352 5.69366 2.06798 7.4542 1.40089 9.58932C0.466964 12.586 0 16.2569 0 20.5646C0 24.8348 0.466964 28.4683 1.40089 31.5399C2.06798 33.675 2.9352 35.4355 4.00255 36.8215C4.703 37.7205 5.0699 38.0201 5.4368 38.2449C5.83705 38.5071 6.13724 38.7318 6.60421 38.9566C7.80497 39.5185 9.37264 40.0054 11.3406 40.38C14.109 40.9044 17.4111 41.1666 21.3136 41.1666C25.1827 41.1666 28.5182 40.9044 31.2866 40.38C33.2212 40.0054 34.7888 39.5559 35.9896 38.9566C36.2898 38.8068 36.69 38.5446 37.0569 38.2449C37.624 37.7954 38.191 37.271 38.5579 36.8215C39.6252 35.473 40.4925 33.7124 41.1596 31.5399C42.0935 28.5057 42.5604 24.8348 42.5604 20.5646C42.5938 16.2943 42.1268 12.6234 41.1929 9.58932Z"
+                        fill="white" />
+                </svg>
+                <nav class="relative flex justify-between md:justity-center items-center w-full md:w-auto">
+                    <div class="flex justify-between md:justify-center items-center md:hidden gap-2">
+                        <button id="hamburger" class="md:hidden block focus:outline-none">
+                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.75 10.8335H3.25" stroke="white" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M22.75 6.5H3.25" stroke="white" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M22.75 15.1665H3.25" stroke="white" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M22.75 19.5H3.25" stroke="white" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <svg class="md:hidden" width="26" height="26" viewBox="0 0 26 26" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.9167 20.5833C16.7031 20.5833 20.5833 16.7031 20.5833 11.9167C20.5833 7.1302 16.7031 3.25 11.9167 3.25C7.1302 3.25 3.25 7.1302 3.25 11.9167C3.25 16.7031 7.1302 20.5833 11.9167 20.5833Z"
+                                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M22.7516 22.7501L18.0391 18.0376" stroke="white" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </div>
+
+                    <svg class="md:hidden" width="101" height="26" viewBox="0 0 101 26" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M94.076 0.402184L87.0399 11.3085L79.8143 0.402184H73.7683L84.3856 17.081V25.4559H89.6732V17.081L100.08 0.402184H94.076ZM78.761 19.7543H65.5736V0.378526H60.2439V25.4795H78.761V19.7543ZM55.2723 0.354868H50.0269V16.3712L37.0291 0.354868H31.5519V25.4559H36.9027V9.10828L50.0058 25.4559H55.2512V0.354868H55.2723ZM21.7562 17.152C21.5034 17.9563 21.1874 18.6187 20.7661 19.1392C20.4922 19.4704 20.429 19.5177 20.2605 19.6597C20.1552 19.7307 20.0077 19.849 19.8181 19.9436C19.3757 20.2038 18.807 20.3931 18.0907 20.535C17.1006 20.748 15.8577 20.8426 14.3831 20.8426C12.8874 20.8426 11.6445 20.7243 10.6333 20.535C9.93815 20.3931 9.3483 20.2038 8.90591 19.9436C8.75845 19.849 8.63205 19.7307 8.48459 19.636C8.35819 19.5414 8.2318 19.4704 7.95794 19.1156C7.55768 18.6187 7.24169 17.9563 6.9889 17.1283C6.65184 15.9927 6.46225 14.6206 6.46225 12.9882C6.46225 11.3794 6.63078 10.0073 6.9889 8.84804C7.24169 8.02002 7.55768 7.38126 7.95794 6.86078C8.21073 6.52957 8.35819 6.41128 8.48459 6.29299C8.63205 6.1747 8.69525 6.12739 8.90591 6.03276C9.3483 5.79618 9.91708 5.58326 10.6333 5.44131C11.6234 5.22839 12.8663 5.13376 14.362 5.13376C15.8156 5.13376 17.0585 5.25205 18.0907 5.46497C18.828 5.60692 19.3968 5.81984 19.8181 6.05641C20.2605 6.31665 20.4922 6.52957 20.7661 6.88444C21.1874 7.40491 21.5034 8.06733 21.7562 8.8717C22.0933 10.0073 22.2829 11.3794 22.2829 13.0118C22.2829 14.5969 22.1143 15.9927 21.7562 17.152ZM26.9385 6.05641C26.5171 4.68426 25.9694 3.57234 25.2953 2.72065C24.8529 2.15287 24.6001 1.9636 24.4527 1.86897C24.2209 1.70337 23.9681 1.53776 23.6522 1.37216C22.9359 1.01729 21.9247 0.709736 20.6608 0.473157C18.9334 0.141947 16.8478 0 14.3831 0C11.9605 0 9.85388 0.165605 8.08434 0.496815C6.82037 0.733394 5.83027 1.01729 5.09296 1.39581C4.79803 1.53776 4.67163 1.63239 4.41884 1.82166C4.27138 1.91629 3.91326 2.17652 3.47087 2.74431C2.77569 3.596 2.22797 4.70792 1.80665 6.05641C1.2168 7.94904 0.921875 10.2675 0.921875 12.9882C0.921875 15.6852 1.2168 17.98 1.80665 19.9199C2.22797 21.2684 2.77569 22.3803 3.4498 23.2557C3.89219 23.8235 4.12392 24.0127 4.35564 24.1547C4.60844 24.3203 4.79803 24.4622 5.09296 24.6042C5.85133 24.9591 6.84144 25.2666 8.08434 25.5032C9.83282 25.8344 11.9184 26 14.3831 26C16.8268 26 18.9334 25.8344 20.6818 25.5032C21.9037 25.2666 22.8938 24.9827 23.6522 24.6042C23.8418 24.5096 24.0945 24.3439 24.3263 24.1547C24.6844 23.8708 25.0425 23.5396 25.2742 23.2557C25.9484 22.404 26.4961 21.2921 26.9174 19.9199C27.5072 18.0036 27.8022 15.6852 27.8022 12.9882C27.8232 10.2912 27.5283 7.9727 26.9385 6.05641Z"
+                            fill="white" />
+                    </svg>
+
+
+                    <div class="flex md:hidden gap-2">
+
+                        <svg class="md:hidden" width="26" height="26" viewBox="0 0 26 26" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6.5 2.1665L3.25 6.49984V21.6665C3.25 22.2411 3.47827 22.7922 3.8846 23.1986C4.29093 23.6049 4.84203 23.8332 5.41667 23.8332H20.5833C21.158 23.8332 21.7091 23.6049 22.1154 23.1986C22.5217 22.7922 22.75 22.2411 22.75 21.6665V6.49984L19.5 2.1665H6.5Z"
+                                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3.25 6.5H22.75" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M17.3346 10.8335C17.3346 11.9828 16.8781 13.085 16.0654 13.8976C15.2528 14.7103 14.1506 15.1668 13.0013 15.1668C11.852 15.1668 10.7498 14.7103 9.93717 13.8976C9.12451 13.085 8.66797 11.9828 8.66797 10.8335"
+                                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        <svg class="md:hidden" width="26" height="26" viewBox="0 0 26 26" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M22.5786 4.99419C22.0253 4.44061 21.3683 4.00147 20.6452 3.70187C19.9221 3.40226 19.1471 3.24805 18.3644 3.24805C17.5817 3.24805 16.8067 3.40226 16.0836 3.70187C15.3605 4.00147 14.7036 4.44061 14.1503 4.99419L13.0019 6.14252L11.8536 4.99419C10.7359 3.87652 9.22004 3.24863 7.63942 3.24863C6.0588 3.24863 4.54292 3.87652 3.42525 4.99419C2.30759 6.11186 1.67969 7.62774 1.67969 9.20836C1.67969 10.789 2.30759 12.3049 3.42525 13.4225L4.57359 14.5709L13.0019 22.9992L21.4303 14.5709L22.5786 13.4225C23.1322 12.8692 23.5713 12.2122 23.8709 11.4892C24.1705 10.7661 24.3247 9.99105 24.3247 9.20836C24.3247 8.42566 24.1705 7.65064 23.8709 6.92756C23.5713 6.20448 23.1322 5.54751 22.5786 4.99419Z"
+                                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+
+                        <svg class="md:hidden" width="26" height="26" viewBox="0 0 26 26" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M21.6654 22.75V20.5833C21.6654 19.4341 21.2088 18.3319 20.3962 17.5192C19.5835 16.7065 18.4813 16.25 17.332 16.25H8.66536C7.51609 16.25 6.41389 16.7065 5.60123 17.5192C4.78858 18.3319 4.33203 19.4341 4.33203 20.5833V22.75"
+                                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M13.0013 11.9167C15.3945 11.9167 17.3346 9.97657 17.3346 7.58333C17.3346 5.1901 15.3945 3.25 13.0013 3.25C10.6081 3.25 8.66797 5.1901 8.66797 7.58333C8.66797 9.97657 10.6081 11.9167 13.0013 11.9167Z"
+                                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+
+
+                    </div>
+                    <ul id="menu" class="hidden flex-col gap-3 mt-2 md:flex md:flex-row md:gap-3 md:mt-0">
+                        <li>
+                            <a href="#" class="text-md font-semibold text-white hover:text-black">NOVEDADES</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-md font-semibold text-white hover:text-black">MUJERES</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-md font-semibold text-white hover:text-black">HOMBRES</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-md font-semibold text-white hover:text-black">TALLAS GRANDES</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-md font-semibold text-red hover:text-black">OFERTAS</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-md font-semibold text-white hover:text-black">ONLY MEN</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-md font-semibold text-white hover:text-black">KIDS</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="flex gap-3">
+                    <svg class="hidden md:flex" width="30" height="31" viewBox="0 0 30 31" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M13.75 24.3335C19.2728 24.3335 23.75 19.8563 23.75 14.3335C23.75 8.81065 19.2728 4.3335 13.75 4.3335C8.22715 4.3335 3.75 8.81065 3.75 14.3335C3.75 19.8563 8.22715 24.3335 13.75 24.3335Z"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M26.25 26.8335L20.8125 21.396" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <svg class="hidden md:flex" width="30" height="31" viewBox="0 0 30 31" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M25 26.8335V24.3335C25 23.0074 24.4732 21.7356 23.5355 20.798C22.5979 19.8603 21.3261 19.3335 20 19.3335H10C8.67392 19.3335 7.40215 19.8603 6.46447 20.798C5.52678 21.7356 5 23.0074 5 24.3335V26.8335"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M15 14.3335C17.7614 14.3335 20 12.0949 20 9.3335C20 6.57207 17.7614 4.3335 15 4.3335C12.2386 4.3335 10 6.57207 10 9.3335C10 12.0949 12.2386 14.3335 15 14.3335Z"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                    <svg class="hidden md:flex" width="30" height="31" viewBox="0 0 30 31" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M26.0516 6.34584C25.4132 5.70709 24.6551 5.20039 23.8208 4.85469C22.9865 4.50899 22.0922 4.33105 21.1891 4.33105C20.286 4.33105 19.3917 4.50899 18.5574 4.85469C17.7231 5.20039 16.9651 5.70709 16.3266 6.34584L15.0016 7.67084L13.6766 6.34584C12.387 5.05622 10.6379 4.33172 8.81411 4.33172C6.99032 4.33172 5.24123 5.05622 3.95161 6.34584C2.662 7.63545 1.9375 9.38454 1.9375 11.2083C1.9375 13.0321 2.662 14.7812 3.95161 16.0708L5.27661 17.3958L15.0016 27.1208L24.7266 17.3958L26.0516 16.0708C26.6904 15.4324 27.1971 14.6744 27.5428 13.84C27.8885 13.0057 28.0664 12.1114 28.0664 11.2083C28.0664 10.3052 27.8885 9.41097 27.5428 8.57664C27.1971 7.74232 26.6904 6.98428 26.0516 6.34584Z"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <svg class="hidden md:flex" width="30" height="31" viewBox="0 0 30 31" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M7.5 3.0835L3.75 8.0835V25.5835C3.75 26.2465 4.01339 26.8824 4.48223 27.3513C4.95107 27.8201 5.58696 28.0835 6.25 28.0835H23.75C24.413 28.0835 25.0489 27.8201 25.5178 27.3513C25.9866 26.8824 26.25 26.2465 26.25 25.5835V8.0835L22.5 3.0835H7.5Z"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M3.75 8.0835H26.25" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path
+                            d="M20 13.0835C20 14.4096 19.4732 15.6813 18.5355 16.619C17.5979 17.5567 16.3261 18.0835 15 18.0835C13.6739 18.0835 12.4021 17.5567 11.4645 16.619C10.5268 15.6813 10 14.4096 10 13.0835"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+            <div class="swiper mySwiper2">
+                <div class="swiper-wrapper relative z-0">
+                    <div class="swiper-slide">
+                        <img class="hidden sm:flex relative z-0 w-full" src="img/banner1.png" />
+                        <img class="relative sm:hidden max-h-custom object-cover z-0 w-full" src="img/banner1xs.png" />
+                        <div class="w-3/4 md:w-custom absolute top-2/3 md:top-custom left-3 md:left-5 z-20 text-white">
+                            <h1 class="leading-custom w-full md:w-3/4 font-bebas text-ml md:text-xxl text-black">
+                                Tus básicos favoritos
+                            </h1>
+                            <p class="hidden md:flex leading-tight text-black my-4">
+                                Baila y déjate llevar con los nuevos vestidos de temporada de
+                                nuestra colección
+                            </p>
+                            <div class="relative z-0 flex gap-1 py-4 sm:py-0 md:py-5">
+                                <button class="bg-black text-white py-2 px-4 md:px-5 text-sm md:text-md font-semibold">
+                                    COMPRAR AHORA
+                                </button>
+                                <button class="hidden md:flex text-black border py-2 px-5 font-semibold border-black">
+                                    VER MÁS
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="hidden sm:flex relative z-0 w-full" src="img/banner2.png" />
+                        <img class="relative sm:hidden max-h-custom object-cover z-0 w-full" src="img/banner2xs.png" />
+                        <div class="w-3/4 md:w-custom absolute top-2/3 top-custom left-3 md:left-5 z-20 text-white">
+                            <h1
+                                class="leading-custom w-full md:w-3/4 font-bebas text-ml md:text-xxl text-white md:text-black">
+                                VESTIDOS DE ENSUEÑO
+                            </h1>
+                            <p class="leading-tight text-white md:text-black my-4">
+                                Baila y dejate llevar con los nuevos vestisos de temporada de nuestra coleccion
+                            </p>
+                            <div class="relative z-0 flex gap-1 py-4 sm:py-0 md:py-5">
+                                <button class="bg-black text-white py-2 px-4 md:px-5 text-sm md:text-md font-semibold">
+                                    COMPRAR AHORA
+                                </button>
+                                <button class="text-black border py-2 px-5 font-semibold border-black">
+                                    VER MÁS
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="hidden sm:flex relative z-0 w-full" src="img/banner1.png" />
+                        <img class="relative sm:hidden max-h-custom object-cover z-0 w-full" src="img/banner1xs.png" />
+                        <div class="w-3/4 md:w-custom absolute top-2/3 md:top-custom left-3 md:left-5 z-20 text-white">
+                            <h1 class="leading-custom w-full md:w-3/4 font-bebas text-ml md:text-xxl text-black">
+                                Tus básicos favoritos
+                            </h1>
+                            <p class="hidden md:flex leading-tight text-black my-4">
+                                Baila y déjate llevar con los nuevos vestidos de temporada de
+                                nuestra colección
+                            </p>
+                            <div class="relative z-0 flex gap-1 py-4 sm:py-0 md:py-5">
+                                <button class="bg-black text-white py-2 px-4 md:px-5 text-sm md:text-md font-semibold">
+                                    COMPRAR AHORA
+                                </button>
+                                <button class="hidden md:flex text-black border py-2 px-5 font-semibold border-black">
+                                    VER MÁS
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="flex justify-between items-center m-3 sm:m-5">
+            <h1 class="hidden sm:flex font-bebas text-black text-5xl">ARMA TU CARRITO</h1>
+            <h1 class="flex sm:hidden font-bebas text-black text-xm">MEJORES VENDIDOS</h1>
+            <button class="hidden sm:flex text-black border py-2 px-5 font-semibold text-sm border-black">DESCUBRÍ
+                MÁS</button>
+        </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper w-full">
+                <article class="swiper-slide flex flex-col justify-start relative">
+                    <img class="relative z-0" src="img/img1.png">
+
+                    <button class="absolute z-20 top-2 right-2 bg-black px-2.5 py-0.5 text-white text-sm font-semibold">
+                        NUEVO
+                    </button>
+
+                    <div class="mx-5 my-2">
+                        <div class="flex justify-between w-full items-start">
+                            <h3 class="w-4/5">CHAQUETAS CUELLO TIPO BIKER PUÑOS ACANALADOS</h3>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.8382 4.61012C20.3274 4.09912 19.721 3.69376 19.0535 3.4172C18.3861 3.14064 17.6707 2.99829 16.9482 2.99829C16.2257 2.99829 15.5103 3.14064 14.8428 3.4172C14.1754 3.69376 13.5689 4.09912 13.0582 4.61012L11.9982 5.67012L10.9382 4.61012C9.90647 3.57842 8.5072 2.99883 7.04817 2.99883C5.58913 2.99883 4.18986 3.57842 3.15817 4.61012C2.12647 5.64181 1.54688 7.04108 1.54688 8.50012C1.54687 9.95915 2.12647 11.3584 3.15817 12.3901L4.21817 13.4501L11.9982 21.2301L19.7782 13.4501L20.8382 12.3901C21.3492 11.8794 21.7545 11.2729 22.0311 10.6055C22.3076 9.93801 22.45 9.2226 22.45 8.50012C22.45 7.77763 22.3076 7.06222 22.0311 6.39476C21.7545 5.7273 21.3492 5.12087 20.8382 4.61012Z"
+                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="flex items-center my-2 gap-2">
+                            <h3 class="line-through">UYU 2.499</h3>
+                            <h2 class="text-xl font-bold">UYU 1.799</h2>
+                        </div>
+                        <div class="flex gap-2">
+                            <svg id="svg1" class="active:border rounded-full border-1 border-black" width="32"
+                                height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="1" y="1" width="30" height="30" rx="15" fill="black" stroke="#BFBFBF" />
+                            </svg>
+                            <svg class="active:border rounded-full border-1 border-black" width="30" height="30"
+                                viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="29" height="29" rx="14.5" fill="#BD427D"
+                                    stroke="#BFBFBF" />
+                            </svg>
+                            <svg class="active:border rounded-full border-1 border-black" width="30" height="30"
+                                viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="29" height="29" rx="14.5" fill="white" stroke="#BFBFBF" />
+                            </svg>
+                        </div>
+
+                    </div>
+
+
+                </article>
+                <article class="swiper-slide flex flex-col justify-start relative">
+                    <img class="relative z-0" src="img/img2.png">
+
+                    <button class="absolute z-20 top-2 right-2 bg-red px-2.5 py-0.5 text-white text-sm font-semibold">
+                        -10%
+                    </button>
+                    <div class="mx-5 my-2">
+                        <div class="flex justify-between w-full">
+                            <h3 class="w-4/5">BLAZER CARMEN - SNOW WHITE</h3>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.8382 4.61012C20.3274 4.09912 19.721 3.69376 19.0535 3.4172C18.3861 3.14064 17.6707 2.99829 16.9482 2.99829C16.2257 2.99829 15.5103 3.14064 14.8428 3.4172C14.1754 3.69376 13.5689 4.09912 13.0582 4.61012L11.9982 5.67012L10.9382 4.61012C9.90647 3.57842 8.5072 2.99883 7.04817 2.99883C5.58913 2.99883 4.18986 3.57842 3.15817 4.61012C2.12647 5.64181 1.54688 7.04108 1.54688 8.50012C1.54687 9.95915 2.12647 11.3584 3.15817 12.3901L4.21817 13.4501L11.9982 21.2301L19.7782 13.4501L20.8382 12.3901C21.3492 11.8794 21.7545 11.2729 22.0311 10.6055C22.3076 9.93801 22.45 9.2226 22.45 8.50012C22.45 7.77763 22.3076 7.06222 22.0311 6.39476C21.7545 5.7273 21.3492 5.12087 20.8382 4.61012Z"
+                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="flex items-center my-2 gap-2">
+                            <h3 class="line-through">UYU 2.499</h3>
+                            <h2 class="text-xl font-bold">UYU 1.799</h2>
+                        </div>
+                        <div>
+                            <svg width="119" height="36" viewBox="0 0 119 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="1" y="1" width="34" height="34" rx="17" stroke="black" />
+                                <rect x="3" y="3" width="30" height="30" rx="15" fill="black" stroke="#BFBFBF" />
+                                <rect x="45.5" y="3.5" width="29" height="29" rx="14.5" fill="#BD427D"
+                                    stroke="#BFBFBF" />
+                                <rect x="87.5" y="3.5" width="29" height="29" rx="14.5" fill="white" stroke="#BFBFBF" />
+                            </svg>
+
+                        </div>
+
+                    </div>
+
+
+                </article>
+                <article class="swiper-slide flex flex-col justify-start relative">
+                    <img class="relative z-0" src="img/img3.png">
+
+                    <button class="absolute z-20 top-2 right-2 bg-black px-2.5 py-0.5 text-white text-sm font-semibold">
+                        BESTSELLER
+                    </button>
+                    <div class="mx-5 my-2">
+                        <div class="flex justify-between w-full">
+                            <h3 class="w-4/5">TOPS CORTE REGULAR CUELLO EN U</h3>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.8382 4.61012C20.3274 4.09912 19.721 3.69376 19.0535 3.4172C18.3861 3.14064 17.6707 2.99829 16.9482 2.99829C16.2257 2.99829 15.5103 3.14064 14.8428 3.4172C14.1754 3.69376 13.5689 4.09912 13.0582 4.61012L11.9982 5.67012L10.9382 4.61012C9.90647 3.57842 8.5072 2.99883 7.04817 2.99883C5.58913 2.99883 4.18986 3.57842 3.15817 4.61012C2.12647 5.64181 1.54688 7.04108 1.54688 8.50012C1.54687 9.95915 2.12647 11.3584 3.15817 12.3901L4.21817 13.4501L11.9982 21.2301L19.7782 13.4501L20.8382 12.3901C21.3492 11.8794 21.7545 11.2729 22.0311 10.6055C22.3076 9.93801 22.45 9.2226 22.45 8.50012C22.45 7.77763 22.3076 7.06222 22.0311 6.39476C21.7545 5.7273 21.3492 5.12087 20.8382 4.61012Z"
+                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="flex items-center my-2 gap-2">
+                            <h3 class="line-through">UYU 2.499</h3>
+                            <h2 class="text-xl font-bold">UYU 1.799</h2>
+                        </div>
+                        <div>
+                            <svg width="119" height="36" viewBox="0 0 119 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="1" y="1" width="34" height="34" rx="17" stroke="black" />
+                                <rect x="3" y="3" width="30" height="30" rx="15" fill="black" stroke="#BFBFBF" />
+                                <rect x="45.5" y="3.5" width="29" height="29" rx="14.5" fill="#BD427D"
+                                    stroke="#BFBFBF" />
+                                <rect x="87.5" y="3.5" width="29" height="29" rx="14.5" fill="white" stroke="#BFBFBF" />
+                            </svg>
+
+                        </div>
+
+                    </div>
+
+
+                </article>
+                <article class="swiper-slide flex flex-col justify-start relative">
+                    <img class="relative z-0" src="img/img4.png">
+
+                    <button class="absolute z-20 top-2 right-2 bg-black px-2.5 py-0.5 text-white text-sm font-semibold">
+                        NUEVO
+                    </button>
+                    <div class="mx-5 my-2">
+                        <div class="flex justify-between w-full">
+                            <h3 class="w-4/5">CHAQUETAS CUELLO TIPO BIKER PUÑOS ACANALADOS</h3>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.8382 4.61012C20.3274 4.09912 19.721 3.69376 19.0535 3.4172C18.3861 3.14064 17.6707 2.99829 16.9482 2.99829C16.2257 2.99829 15.5103 3.14064 14.8428 3.4172C14.1754 3.69376 13.5689 4.09912 13.0582 4.61012L11.9982 5.67012L10.9382 4.61012C9.90647 3.57842 8.5072 2.99883 7.04817 2.99883C5.58913 2.99883 4.18986 3.57842 3.15817 4.61012C2.12647 5.64181 1.54688 7.04108 1.54688 8.50012C1.54687 9.95915 2.12647 11.3584 3.15817 12.3901L4.21817 13.4501L11.9982 21.2301L19.7782 13.4501L20.8382 12.3901C21.3492 11.8794 21.7545 11.2729 22.0311 10.6055C22.3076 9.93801 22.45 9.2226 22.45 8.50012C22.45 7.77763 22.3076 7.06222 22.0311 6.39476C21.7545 5.7273 21.3492 5.12087 20.8382 4.61012Z"
+                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="flex items-center my-2 gap-2">
+                            <h3 class="line-through">UYU 2.499</h3>
+                            <h2 class="text-xl font-bold">UYU 1.799</h2>
+                        </div>
+                        <div>
+                            <svg width="119" height="36" viewBox="0 0 119 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="1" y="1" width="34" height="34" rx="17" stroke="black" />
+                                <rect x="3" y="3" width="30" height="30" rx="15" fill="black" stroke="#BFBFBF" />
+                                <rect x="45.5" y="3.5" width="29" height="29" rx="14.5" fill="#BD427D"
+                                    stroke="#BFBFBF" />
+                                <rect x="87.5" y="3.5" width="29" height="29" rx="14.5" fill="white" stroke="#BFBFBF" />
+                            </svg>
+
+                        </div>
+
+                    </div>
+
+
+                </article>
+                <article class="swiper-slide flex flex-col justify-start relative">
+                    <img class="relative z-0" src="img/img1.png">
+
+                    <button class="absolute z-20 top-2 right-2 bg-black px-2.5 py-0.5 text-white text-sm font-semibold">
+                        NUEVO
+                    </button>
+
+                    <div class="mx-5 my-2">
+                        <div class="flex justify-between w-full items-start">
+                            <h3 class="w-4/5">CHAQUETAS CUELLO TIPO BIKER PUÑOS ACANALADOS</h3>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.8382 4.61012C20.3274 4.09912 19.721 3.69376 19.0535 3.4172C18.3861 3.14064 17.6707 2.99829 16.9482 2.99829C16.2257 2.99829 15.5103 3.14064 14.8428 3.4172C14.1754 3.69376 13.5689 4.09912 13.0582 4.61012L11.9982 5.67012L10.9382 4.61012C9.90647 3.57842 8.5072 2.99883 7.04817 2.99883C5.58913 2.99883 4.18986 3.57842 3.15817 4.61012C2.12647 5.64181 1.54688 7.04108 1.54688 8.50012C1.54687 9.95915 2.12647 11.3584 3.15817 12.3901L4.21817 13.4501L11.9982 21.2301L19.7782 13.4501L20.8382 12.3901C21.3492 11.8794 21.7545 11.2729 22.0311 10.6055C22.3076 9.93801 22.45 9.2226 22.45 8.50012C22.45 7.77763 22.3076 7.06222 22.0311 6.39476C21.7545 5.7273 21.3492 5.12087 20.8382 4.61012Z"
+                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="flex items-center my-2 gap-2">
+                            <h3 class="line-through">UYU 2.499</h3>
+                            <h2 class="text-xl font-bold">UYU 1.799</h2>
+                        </div>
+                        <div>
+                            <svg width="119" height="36" viewBox="0 0 119 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="1" y="1" width="34" height="34" rx="17" stroke="black" />
+                                <rect x="3" y="3" width="30" height="30" rx="15" fill="black" stroke="#BFBFBF" />
+                                <rect x="45.5" y="3.5" width="29" height="29" rx="14.5" fill="#BD427D"
+                                    stroke="#BFBFBF" />
+                                <rect x="87.5" y="3.5" width="29" height="29" rx="14.5" fill="white" stroke="#BFBFBF" />
+                            </svg>
+
+                        </div>
+
+                    </div>
+
+
+                </article>
+                <article class="swiper-slide flex flex-col justify-start relative">
+                    <img class="relative z-0" src="img/img2.png">
+
+                    <button class="absolute z-20 top-2 right-2 bg-red px-2.5 py-0.5 text-white text-sm font-semibold">
+                        -10%
+                    </button>
+                    <div class="mx-5 my-2">
+                        <div class="flex justify-between w-full">
+                            <h3 class="w-4/5">BLAZER CARMEN - SNOW WHITE</h3>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.8382 4.61012C20.3274 4.09912 19.721 3.69376 19.0535 3.4172C18.3861 3.14064 17.6707 2.99829 16.9482 2.99829C16.2257 2.99829 15.5103 3.14064 14.8428 3.4172C14.1754 3.69376 13.5689 4.09912 13.0582 4.61012L11.9982 5.67012L10.9382 4.61012C9.90647 3.57842 8.5072 2.99883 7.04817 2.99883C5.58913 2.99883 4.18986 3.57842 3.15817 4.61012C2.12647 5.64181 1.54688 7.04108 1.54688 8.50012C1.54687 9.95915 2.12647 11.3584 3.15817 12.3901L4.21817 13.4501L11.9982 21.2301L19.7782 13.4501L20.8382 12.3901C21.3492 11.8794 21.7545 11.2729 22.0311 10.6055C22.3076 9.93801 22.45 9.2226 22.45 8.50012C22.45 7.77763 22.3076 7.06222 22.0311 6.39476C21.7545 5.7273 21.3492 5.12087 20.8382 4.61012Z"
+                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="flex items-center my-2 gap-2">
+                            <h3 class="line-through">UYU 2.499</h3>
+                            <h2 class="text-xl font-bold">UYU 1.799</h2>
+                        </div>
+                        <div>
+                            <svg width="119" height="36" viewBox="0 0 119 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="1" y="1" width="34" height="34" rx="17" stroke="black" />
+                                <rect x="3" y="3" width="30" height="30" rx="15" fill="black" stroke="#BFBFBF" />
+                                <rect x="45.5" y="3.5" width="29" height="29" rx="14.5" fill="#BD427D"
+                                    stroke="#BFBFBF" />
+                                <rect x="87.5" y="3.5" width="29" height="29" rx="14.5" fill="white" stroke="#BFBFBF" />
+                            </svg>
+
+                        </div>
+
+                    </div>
+
+
+                </article>
+                <article class="swiper-slide flex flex-col justify-start relative">
+                    <img class="relative z-0" src="img/img3.png">
+
+                    <button class="absolute z-20 top-2 right-2 bg-black px-2.5 py-0.5 text-white text-sm font-semibold">
+                        BESTSELLER
+                    </button>
+                    <div class="mx-5 my-2">
+                        <div class="flex justify-between w-full">
+                            <h3 class="w-4/5">TOPS CORTE REGULAR CUELLO EN U</h3>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.8382 4.61012C20.3274 4.09912 19.721 3.69376 19.0535 3.4172C18.3861 3.14064 17.6707 2.99829 16.9482 2.99829C16.2257 2.99829 15.5103 3.14064 14.8428 3.4172C14.1754 3.69376 13.5689 4.09912 13.0582 4.61012L11.9982 5.67012L10.9382 4.61012C9.90647 3.57842 8.5072 2.99883 7.04817 2.99883C5.58913 2.99883 4.18986 3.57842 3.15817 4.61012C2.12647 5.64181 1.54688 7.04108 1.54688 8.50012C1.54687 9.95915 2.12647 11.3584 3.15817 12.3901L4.21817 13.4501L11.9982 21.2301L19.7782 13.4501L20.8382 12.3901C21.3492 11.8794 21.7545 11.2729 22.0311 10.6055C22.3076 9.93801 22.45 9.2226 22.45 8.50012C22.45 7.77763 22.3076 7.06222 22.0311 6.39476C21.7545 5.7273 21.3492 5.12087 20.8382 4.61012Z"
+                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="flex items-center my-2 gap-2">
+                            <h3 class="line-through">UYU 2.499</h3>
+                            <h2 class="text-xl font-bold">UYU 1.799</h2>
+                        </div>
+                        <div>
+                            <svg width="119" height="36" viewBox="0 0 119 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="1" y="1" width="34" height="34" rx="17" stroke="black" />
+                                <rect x="3" y="3" width="30" height="30" rx="15" fill="black" stroke="#BFBFBF" />
+                                <rect x="45.5" y="3.5" width="29" height="29" rx="14.5" fill="#BD427D"
+                                    stroke="#BFBFBF" />
+                                <rect x="87.5" y="3.5" width="29" height="29" rx="14.5" fill="white" stroke="#BFBFBF" />
+                            </svg>
+
+                        </div>
+
+                    </div>
+
+
+                </article>
+                <article class="swiper-slide flex flex-col justify-start relative">
+                    <img class="relative z-0" src="img/img4.png">
+
+                    <button class="absolute z-20 top-2 right-2 bg-black px-2.5 py-0.5 text-white text-sm font-semibold">
+                        NUEVO
+                    </button>
+                    <div class="mx-5 my-2">
+                        <div class="flex justify-between w-full">
+                            <h3 class="w-4/5">CHAQUETAS CUELLO TIPO BIKER PUÑOS ACANALADOS</h3>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.8382 4.61012C20.3274 4.09912 19.721 3.69376 19.0535 3.4172C18.3861 3.14064 17.6707 2.99829 16.9482 2.99829C16.2257 2.99829 15.5103 3.14064 14.8428 3.4172C14.1754 3.69376 13.5689 4.09912 13.0582 4.61012L11.9982 5.67012L10.9382 4.61012C9.90647 3.57842 8.5072 2.99883 7.04817 2.99883C5.58913 2.99883 4.18986 3.57842 3.15817 4.61012C2.12647 5.64181 1.54688 7.04108 1.54688 8.50012C1.54687 9.95915 2.12647 11.3584 3.15817 12.3901L4.21817 13.4501L11.9982 21.2301L19.7782 13.4501L20.8382 12.3901C21.3492 11.8794 21.7545 11.2729 22.0311 10.6055C22.3076 9.93801 22.45 9.2226 22.45 8.50012C22.45 7.77763 22.3076 7.06222 22.0311 6.39476C21.7545 5.7273 21.3492 5.12087 20.8382 4.61012Z"
+                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="flex items-center my-2 gap-2">
+                            <h3 class="line-through">UYU 2.499</h3>
+                            <h2 class="text-xl font-bold">UYU 1.799</h2>
+                        </div>
+                        <div>
+                            <svg width="119" height="36" viewBox="0 0 119 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="1" y="1" width="34" height="34" rx="17" stroke="black" />
+                                <rect x="3" y="3" width="30" height="30" rx="15" fill="black" stroke="#BFBFBF" />
+                                <rect x="45.5" y="3.5" width="29" height="29" rx="14.5" fill="#BD427D"
+                                    stroke="#BFBFBF" />
+                                <rect x="87.5" y="3.5" width="29" height="29" rx="14.5" fill="white" stroke="#BFBFBF" />
+                            </svg>
+
+                        </div>
+
+                    </div>
+
+
+                </article>
+            </div>
+            <button
+                class="flex sm:hidden text-black border py-2 px-5 my-6 mx-3 font-semibold text-sm border-black">DESCUBRÍ
+                MÁS</button>
+            <button class="button-prev absolute z-20 top-custom2 left-5">
+                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="34" height="34" fill="white" fill-opacity="0.5" />
+                    <path d="M22.8867 29L10.8867 17L22.8867 5" stroke="black" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+            <button class="button-next absolute z-30 top-custom2 right-5">
+                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="34" height="34" fill="white" fill-opacity="0.5" />
+                    <path d="M10.8867 29L22.8867 17L10.8867 5" stroke="black" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper2 = new Swiper(".mySwiper2", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+        var swiper1 = new Swiper(".mySwiper", {
+            slidesPerView: 4,
+            spaceBetween: 1,
+            freeMode: true,
+            navigation: {
+                nextEl: ".button-next",
+                prevEl: ".button-prev",
+            },
+            breakpoints: {
+                1050: {
+                    slidesPerView: 4,
+                },
+                640: {
+                    slidesPerView: 2,
+                },
+                0: {
+                    slidesPerView: 1,
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
